@@ -1,0 +1,82 @@
+%================================================================================
+% portada.sty
+%================================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{portada}[2025/02/18 v1.0 Estilo para portada]
+
+%------------------------------------------------------------------------------
+% Paquetes específicos para la portada
+%------------------------------------------------------------------------------
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins}
+
+%------------------------------------------------------------------------------
+% Comandos para datos de portada (valores por defecto)
+%------------------------------------------------------------------------------
+\newcommand{\ProjectTitle}{(Título del Proyecto)}
+\newcommand{\ProjectSubtitle}{(Subtítulo)}
+\newcommand{\AuthorName}{(Autor/es)}
+\newcommand{\Institution}{(Institución)}
+\newcommand{\Year}{(Año)}
+
+%------------------------------------------------------------------------------
+% Comando \makecover para generar la portada
+%------------------------------------------------------------------------------
+\newcommand{\makecover}{
+    \begin{titlepage}
+
+    % Fondo oscuro
+    \pagecolor{beeBlack}
+
+    % Caja con degradado (gris->negro) que cubre toda la página
+    \begin{tcolorbox}[
+        enhanced,
+        width=\textwidth,
+        height=\textheight,
+        frame empty,
+        interior style={
+            left color=beeGrey,
+            right color=beeBlack
+        },
+        valign=center,
+        boxrule=0pt,
+        top=2cm,
+        bottom=2cm,
+        left=2cm,
+        right=2cm
+    ]
+      \begin{center}
+         % LOGO (ajusta la ruta y tamaño según tu imagen)
+         \includegraphics[width=5cm]{imagenes/logo.png}\\[1.0cm]
+
+         % Título en amarillo
+         {\color{beeYellow}\Huge \bfseries \ProjectTitle}\\[0.5cm]
+         % Subtítulo en blanco
+         {\color{beeWhite}\large \textit{\ProjectSubtitle}}
+      \end{center}
+
+      \vfill
+
+      % Datos en la parte inferior derecha
+      \begin{flushright}
+        {\color{beeWhite}
+          \large
+          \textbf{Autor(es):} \AuthorName\\[5pt]
+          \textbf{Institución:} \Institution\\[5pt]
+          \textbf{Año:} \Year
+        }
+      \end{flushright}
+    \end{tcolorbox}
+
+    % Restauramos color de página a blanco
+    \clearpage
+    \nopagecolor
+
+    \end{titlepage}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+}

@@ -1,0 +1,53 @@
+%================================================================================
+% contenidos.sty
+%================================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{contenidos}[2025/02/18 v1.0 Estilos para contenidos]
+
+%--------------------------------------------------------------------------------
+% Paquetes necesarios
+%--------------------------------------------------------------------------------
+\RequirePackage{tocloft}          % Para personalizar el índice de contenidos
+
+%--------------------------------------------------------------------------------
+% Personalización del índice de contenidos
+%--------------------------------------------------------------------------------
+\renewcommand{\cfttoctitlefont}{\Huge\bfseries\color{beeYellow}} % Título del índice
+\renewcommand{\cftsecfont}{\color{beeGrey}}                    % Secciones
+\renewcommand{\cftsecpagefont}{\color{beeGrey}}                  % Números de página de secciones
+\renewcommand{\cftsubsecfont}{\color{beeGrey}}                % Subsecciones
+\renewcommand{\cftsubsecpagefont}{\color{beeGrey}}              % Números de página de subsecciones
+
+% Ajustes de espaciado y sangría
+\setlength{\cftbeforetoctitleskip}{-1em}
+\setlength{\cftaftertoctitleskip}{2.5em}
+\setlength{\cftbeforesecskip}{0.5em}
+\setlength{\cftbeforesubsecskip}{0.25em}
+
+%--------------------------------------------------------------------------------
+% Personalización de la lista de figuras
+%--------------------------------------------------------------------------------
+\renewcommand{\cftloftitlefont}{\Huge\bfseries\color{beeYellow}} % Título de la lista de figuras
+\renewcommand{\cftfigfont}{\color{beeGrey}}                    % Figuras
+\renewcommand{\cftfigpagefont}{\color{beeGrey}}                  % Números de página de figuras
+
+% Ajustes de espaciado y sangría
+\setlength{\cftbeforeloftitleskip}{-1em}
+\setlength{\cftafterloftitleskip}{2.5em}
+\setlength{\cftbeforefigskip}{0.5em}
+
+%--------------------------------------------------------------------------------
+% Personalización de la lista de tablas
+%--------------------------------------------------------------------------------
+\renewcommand{\cftlottitlefont}{\Huge\bfseries\color{beeYellow}} % Título de la lista de tablas
+\renewcommand{\cfttabfont}{\color{beeGrey}}                   % Tablas
+\renewcommand{\cfttabpagefont}{\color{beeGrey}}                 % Números de página de tablas
+
+% Ajustes de espaciado y sangría
+\setlength{\cftbeforelottitleskip}{-1em}
+\setlength{\cftafterlottitleskip}{2.5em}
+\setlength{\cftbeforetabskip}{0.5em}
+
+%--------------------------------------------------------------------------------
+% Fin del paquete
+%--------------------------------------------------------------------------------

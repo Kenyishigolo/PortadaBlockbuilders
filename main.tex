@@ -1,0 +1,28 @@
+%================================================================================
+% main.tex
+%================================================================================
+\documentclass{blockbuilders} % Se usa un tipo de documento customizado
+
+%------------------------------------------------------------------------------
+% Para cambiar los datos de la portada editen lo de abajo.
+%------------------------------------------------------------------------------
+\renewcommand{\ProjectTitle}{Documentación de Proyecto Blockchain}
+\renewcommand{\ProjectSubtitle}{Soluciones descentralizadas e innovadoras}
+\renewcommand{\AuthorName}{BlockBuilders}
+\renewcommand{\Institution}{BlockBuilders}
+\renewcommand{\Year}{2025}
+
+\begin{document}
+
+%------------------------------------------------------------------------------
+% Generación de la portada
+%------------------------------------------------------------------------------
+\makecover
+
+%------------------------------------------------------------------------------
+% CONTENIDO DEL DOCUMENTO
+%------------------------------------------------------------------------------
+
+\input{capitulos/introduccion}  % Insertamos el contenido de un archivo externo
+
+\end{document}
